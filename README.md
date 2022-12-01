@@ -13,10 +13,18 @@
 
 <h5>PORT = 3003 //atur sesuai keinginan kalian portnya agar tidak berbenturan</h5>
 
-<h5>DB_CONNECTION = https://belajar-rest-api-mongodb-deploy-production.up.railway.app // api yang sudah dideploy ke raiwaly dan bisa diakses dari bahasa pemrograman apa pun</h5>
+<h5>DB_CONNECTION = https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa //api yang sudah dideploy ke raiwaly dan bisa diakses dari bahasa pemrograman apa pun</h5>
 <h4>setelah semua selesai setup lalu npm run frans-go</h4>
 <h3>Enjoy Coding !!</h3>
 
+
+note*:
+endpoint rest api
+<h3>GET:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa - MENAMPILKAN SEMUA DATA MAHASISWA</h3>
+<h3>GET:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id} -  MENAMPILKAN DATA MAHASISWA SESUAI IDNYA</h3>
+<h3>POST:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa -  MENAMBAHKAN SEMUA DATA MAHASISWA</h3>
+<h3>PUT:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id} -  UPDATE SEMUA DATA MAHASISWA</h3>
+<h3>DELETE:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id}-  MENGHAPUS SEMUA DATA MAHASISWA</h3>
 
 
 
