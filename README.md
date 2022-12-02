@@ -27,4 +27,5 @@ endpoint rest api
 <h3>DELETE:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id}-  MENGHAPUS SEMUA DATA MAHASISWA</h3>
 
 
+alternatif link rest api jika error: https://fransbchtr-api.vercel.app/mahasiswa
 
