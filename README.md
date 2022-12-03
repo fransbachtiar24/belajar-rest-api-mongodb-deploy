@@ -23,6 +23,7 @@
 <h5><h6>*note</h6>
 
 `https://fransbchtr-api.vercel.app` </br>
+`https://belajar-rest-api-mongodb-deploy-production.up.railway.app/`
 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=fransbachtiar24&label=Profile%20views&color=0e75b6&style=flat" alt="fransbachtiar24" /> </p>
