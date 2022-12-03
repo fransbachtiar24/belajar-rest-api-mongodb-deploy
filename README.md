@@ -20,11 +20,12 @@
 
 note*:
 endpoint rest api
-<h3>GET:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa - MENAMPILKAN SEMUA DATA MAHASISWA</h3>
-<h3>GET:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id} -  MENAMPILKAN DATA MAHASISWA SESUAI IDNYA</h3>
-<h3>POST:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa -  MENAMBAHKAN SEMUA DATA MAHASISWA</h3>
-<h3>PUT:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id} -  UPDATE SEMUA DATA MAHASISWA</h3>
-<h3>DELETE:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id}-  MENGHAPUS SEMUA DATA MAHASISWA</h3>
+<h5>GET:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa - MENAMPILKAN SEMUA DATA MAHASISWA</h5>
+<h5>GET:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id} -  MENAMPILKAN DATA MAHASISWA SESUAI IDNYA</h5>
+<h5>POST:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa -  MENAMBAHKAN SEMUA DATA MAHASISWA</h5>
+<h5>PUT:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id} -  UPDATE SEMUA DATA MAHASISWA</h5>
+<h5>DELETE:https://belajar-rest-api-mongodb-deploy-production.up.railway.app/mahasiswa/{_id}-  MENGHAPUS SEMUA DATA MAHASISWA</h5>
 
 
+alternatif link rest api jika error: https://fransbchtr-api.vercel.app/mahasiswa
 
