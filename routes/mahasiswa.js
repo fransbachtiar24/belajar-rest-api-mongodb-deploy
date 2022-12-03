@@ -4,7 +4,7 @@ const Mahasiswa = require("../models/Mahasiswa");
 const verifyToken = require("../routes/verifyToken");
 
 // create (post)
-router.post("/", async (req, res) => {
+router.post("/", verifyToken, async (req, res) => {
   const mahasiswaPost = new Mahasiswa({
     nama: req.body.nama,
     alamat: req.body.alamat,
@@ -28,7 +28,7 @@ router.get("/", verifyToken, async (req, res) => {
   }
 });
 
-router.get("/:mahasiswaId", async (req, res) => {
+router.get("/:mahasiswaId", verifyToken, async (req, res) => {
   try {
     const mahasiswa = await Mahasiswa.findById(req.params.mahasiswaId);
     res.json(mahasiswa);
@@ -37,7 +37,7 @@ router.get("/:mahasiswaId", async (req, res) => {
   }
 });
 
-router.put("/:mahasiswaId", async (req, res) => {
+router.put("/:mahasiswaId", verifyToken, async (req, res) => {
   // tampung inputan untuk value yang akan di edit
 
   const data = {
@@ -58,7 +58,7 @@ router.put("/:mahasiswaId", async (req, res) => {
 });
 
 // delete
-router.delete("/:mahasiswaId", async (req, res) => {
+router.delete("/:mahasiswaId", verifyToken, async (req, res) => {
   try {
     const mahasiswa = await Mahasiswa.deleteOne({
       _id: req.params.mahasiswaId,
