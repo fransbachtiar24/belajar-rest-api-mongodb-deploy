@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Mahasiswa = require("../models/Mahasiswa");
 const verifyToken = require("../routes/verifyToken");
+const response = require("../config/response");
 
 // create (post)
 router.post("/", verifyToken, async (req, res) => {
@@ -12,7 +13,7 @@ router.post("/", verifyToken, async (req, res) => {
   try {
     const mahasiswa = await mahasiswaPost.save();
     // res.json(mahasiswa);
-    res.status(201).json(mahasiswa);
+    response(201, mahasiswa, `Data Berhasil Di Tambah`, res);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -22,7 +23,7 @@ router.post("/", verifyToken, async (req, res) => {
 router.get("/", verifyToken, async (req, res) => {
   try {
     const mahasiswa = await Mahasiswa.find();
-    res.json(mahasiswa);
+    response(200, mahasiswa, "Mendapatkan Semua Data", res);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -31,7 +32,7 @@ router.get("/", verifyToken, async (req, res) => {
 router.get("/:mahasiswaId", verifyToken, async (req, res) => {
   try {
     const mahasiswa = await Mahasiswa.findById(req.params.mahasiswaId);
-    res.json(mahasiswa);
+    response(200, mahasiswa, `Berhasil Mendapatkan Data`, res);
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
@@ -51,7 +52,7 @@ router.put("/:mahasiswaId", verifyToken, async (req, res) => {
       data
     );
     // response
-    res.status(200).json(mahasiswa);
+    response(200, mahasiswa, `Data Berhasil Di Update`, res);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -63,7 +64,7 @@ router.delete("/:mahasiswaId", verifyToken, async (req, res) => {
     const mahasiswa = await Mahasiswa.deleteOne({
       _id: req.params.mahasiswaId,
     });
-    res.status(200).json(mahasiswa);
+    response(200, mahasiswa, `Data Berhasil Di Hapus`, res);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
