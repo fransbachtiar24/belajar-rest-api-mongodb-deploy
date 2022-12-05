@@ -20,7 +20,7 @@ router.post("/", verifyToken, async (req, res) => {
 });
 
 // read (get)
-router.get("/", verifyToken, async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const mahasiswa = await Mahasiswa.find();
     response(200, mahasiswa, "Mendapatkan Semua Data", res);
