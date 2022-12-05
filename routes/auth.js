@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const { registerValidation } = require("../config/validation");
 
 // register auth
-router.post("/v1/register", async (req, res) => {
+router.post("/register", async (req, res) => {
   // mengvalidasi inputan user harus sesuai yang ditentukan
   const { error } = registerValidation(req.body);
   if (error)
@@ -43,7 +43,7 @@ router.post("/v1/register", async (req, res) => {
 });
 
 // login
-router.post("/v1/login", async (req, res) => {
+router.post("/login", async (req, res) => {
   // cek email di database
   const user = await User.findOne({ email: req.body.email });
   if (!user)

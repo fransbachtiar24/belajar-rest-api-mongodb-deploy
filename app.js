@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 
 app.use(bodyParser.json());
 app.use("/mahasiswa", mahasiswaRoutes);
-app.use("/auth", authRoutes);
+app.use("/mahasiswa/auth", authRoutes);
 
 mongoose.connect(process.env.DB_CONNECTION, {
   useNewUrlParser: true,
